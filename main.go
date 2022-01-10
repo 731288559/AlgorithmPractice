@@ -1,10 +1,11 @@
 package main
 
 import (
-	easy "my_practice/algorithm/easy"
-	hard "my_practice/algorithm/hard"
-	medium "my_practice/algorithm/medium"
 	"strconv"
+
+	"my_practice/algorithm/easy"
+	"my_practice/algorithm/hard"
+	"my_practice/algorithm/medium"
 )
 
 func t() {
@@ -16,5 +17,8 @@ func t() {
 }
 
 func main() {
-	easy.T_LC1629()
+	// easy.T_LC5976()
+	// feature.DeferTest()
+	// hard.T_LC5979()
+	medium.T_LC5978()
 }

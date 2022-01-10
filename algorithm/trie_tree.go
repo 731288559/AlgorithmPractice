@@ -79,6 +79,7 @@ func (t *TrieTreeNode) GetLongest(s string) (isFind bool, result string) {
 }
 
 func (t *TrieTreeNode) StartsWith(s string) bool {
+	// TODO
 	return false
 }
 
