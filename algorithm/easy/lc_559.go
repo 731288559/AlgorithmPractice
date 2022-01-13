@@ -8,26 +8,6 @@ type Node struct {
 }
 
 func maxDepth(root *Node) int {
-	// var dfs func(n *Node) int
-	// dfs = func(node *Node) int {
-	// 	if node == nil {
-	// 		return 0
-	// 	}
-	// 	if len(node.Children) == 0 {
-	// 		return 1
-	// 	}
-	// 	max := 0
-	// 	tmp := 0
-	// 	for _, n := range node.Children {
-	// 		tmp = dfs(n) + 1
-	// 		if tmp > max {
-	// 			max = tmp
-	// 		}
-	// 	}
-	// 	return max
-	// }
-	// return dfs(root)
-
 	if root == nil {
 		return 0
 	}
@@ -45,12 +25,12 @@ func T_LC559() {
 	root := &Node{
 		Val: 1,
 		Children: []*Node{
-			&Node{Val: 3, Children: []*Node{
-				&Node{Val: 5},
-				&Node{Val: 6},
+			{Val: 3, Children: []*Node{
+				{Val: 5},
+				{Val: 6},
 			}},
-			&Node{Val: 2},
-			&Node{Val: 4},
+			{Val: 2},
+			{Val: 4},
 		},
 	}
 	println(maxDepth(root), 3)

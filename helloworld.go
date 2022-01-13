@@ -3,8 +3,6 @@ package main
 import (
 	"fmt"
 	"sync"
-
-	"my_practice/algorithm"
 )
 
 var m sync.Map
@@ -30,7 +28,4 @@ func Test() {
 	for idx, i := range str {
 		fmt.Printf("idx:%d, char:%v\n", idx, i)
 	}
-
-	// algorithm.TestLC45()
-	algorithm.TestOther1()
 }

@@ -1,4 +1,4 @@
-package algorithm
+package other
 
 // 给定一个数组nums,nums[i]表示每个木头的长度,木头可以截断,现在需要k根长度一样的木头,每根木头的最大长度是多少?
 

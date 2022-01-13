@@ -58,3 +58,22 @@ func Channel_2() {
 
 	wg.Wait()
 }
+
+func Channel_3() {
+	c := make(chan int)
+	go func() {
+		for i := 0; i < 10; i++ {
+			c <- i
+		}
+		close(c)
+	}()
+
+	for {
+		select {
+		case x, ok := <-c:
+			if ok {
+				println(x)
+			}
+		}
+	}
+}
