@@ -32,7 +32,7 @@ func earliestFullBloom(plantTime []int, growTime []int) int {
 	return maxTime
 }
 
-func T_LC5979() {
+func T_LC2136() {
 	println(earliestFullBloom([]int{1, 4, 3}, []int{2, 3, 1}), 9)
 	println(earliestFullBloom([]int{1, 2, 3, 2}, []int{2, 1, 2, 1}), 9)
 	println(earliestFullBloom([]int{1}, []int{1}), 2)
