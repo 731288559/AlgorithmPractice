@@ -27,5 +27,12 @@ func main() {
 	// feature.Channel_3()
 	// medium.T_LC334()
 
-	easy.T_LC747()
+	// other.TestDeleteListMN()
+	// other.TestEightQueens()
+
+	// easy.T_LC1716()
+	// medium.T_LC429()
+	// hard.T_LC1220()
+	// medium.T_LC539()
+	easy.T_LC219()
 }
