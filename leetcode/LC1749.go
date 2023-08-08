@@ -14,6 +14,7 @@ package leetcode
 */
 
 func maxAbsoluteSum(nums []int) int {
+	// TODO
 	ans := 0
 
 	abs := func(n int) int {

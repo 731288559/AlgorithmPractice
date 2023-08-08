@@ -32,6 +32,13 @@ func Test_maxAbsoluteSum(t *testing.T) {
 			},
 			want: 10,
 		},
+		{
+			name: "4",
+			args: args{
+				nums: []int{-3, 2, 5},
+			},
+			want: 7,
+		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
