@@ -43,7 +43,6 @@ func robV1(nums []int) int {
 		}
 		return max(nums[i]+f(i+2), f(i+1))
 	}
-
 	return max(nums[0]+f(2), f(1))
 }
 
