@@ -1,5 +1,10 @@
 package leetcode
 
+import (
+	"math"
+	"sort"
+)
+
 /*
 987. 二叉树的垂序遍历
 
@@ -12,7 +17,46 @@ package leetcode
 返回二叉树的 垂序遍历 序列。
 */
 func verticalTraversal(root *TreeNode) [][]int {
-	var result [][]int
+	type P struct {
+		Row int
+		Col int
+		Val int
+	}
+	var l []P
 
-	return result
+	var dfs func(n *TreeNode, row, col int)
+	dfs = func(n *TreeNode, row, col int) {
+		if n == nil {
+			return
+		}
+		l = append(l, P{Row: row, Col: col, Val: n.Val})
+		dfs(n.Left, row+1, col-1)
+		dfs(n.Right, row+1, col+1)
+	}
+
+	dfs(root, 0, 0)
+
+	sort.Slice(l, func(i, j int) bool {
+		a, b := l[i], l[j]
+		if a.Col != b.Col {
+			return a.Col < b.Col
+		}
+		if a.Row != b.Row {
+			return a.Row < b.Row
+		}
+		return a.Val < b.Val
+	})
+
+	var ans [][]int
+
+	lastCol := math.MinInt
+	for _, n := range l {
+		if n.Col != lastCol {
+			ans = append(ans, nil)
+			lastCol = n.Col
+		}
+		ans[len(ans)-1] = append(ans[len(ans)-1], n.Val)
+	}
+
+	return ans
 }

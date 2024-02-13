@@ -27,7 +27,26 @@ func Test_verticalTraversal(t *testing.T) {
 					},
 				},
 			},
-			want: nil,
+			want: [][]int{{9}, {3, 15}, {20}, {7}},
+		},
+		{
+			name: "",
+			args: args{
+				root: &TreeNode{
+					Val: 1,
+					Left: &TreeNode{
+						Val:   2,
+						Left:  &TreeNode{Val: 4},
+						Right: &TreeNode{Val: 6},
+					},
+					Right: &TreeNode{
+						Val:   3,
+						Left:  &TreeNode{Val: 5},
+						Right: &TreeNode{Val: 7},
+					},
+				},
+			},
+			want: [][]int{{4}, {2}, {1, 5, 6}, {3}, {7}},
 		},
 	}
 	for _, tt := range tests {
