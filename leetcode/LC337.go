@@ -16,20 +16,6 @@ package leetcode
 //输出: 9
 //解释: 小偷一晚能够盗取的最高金额 4 + 5 = 9
 
-/**
-* Definition for a binary tree node.
-* type TreeNode struct {
-*     Val int
-*     Left *TreeNode
-*     Right *TreeNode
-* }
- */
-type TreeNode struct {
-	Val   int
-	Left  *TreeNode
-	Right *TreeNode
-}
-
 func rob3(root *TreeNode) int {
 	var dfs func(n *TreeNode) (int, int) // 返回取和不取当前节点时的最大价值
 	dfs = func(n *TreeNode) (int, int) {
