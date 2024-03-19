@@ -45,10 +45,3 @@ func robV1(nums []int) int {
 	}
 	return max(nums[0]+f(2), f(1))
 }
-
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
