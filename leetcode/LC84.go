@@ -7,6 +7,10 @@ package leetcode
 	求在该柱状图中，能够勾勒出来的矩形的最大面积。
 */
 
+/*
+	利用单调栈保存下标的方式，计算出左右最近的次高柱子
+*/
+
 func largestRectangleArea(heights []int) int {
 	n := len(heights)
 	left := make([]int, n)
