@@ -6,16 +6,21 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
+type ListNode struct {
+	Val  int
+	Next *ListNode
 }
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
+//func max(a, b int) int {
+//	if a > b {
+//		return a
+//	}
+//	return b
+//}
+//
+//func min(a, b int) int {
+//	if a < b {
+//		return a
+//	}
+//	return b
+//}
