@@ -11,6 +11,12 @@ type ListNode struct {
 	Next *ListNode
 }
 
+type ListNode2 struct {
+	Val  int
+	Next *ListNode
+	Prev *ListNode
+}
+
 //func max(a, b int) int {
 //	if a > b {
 //		return a
