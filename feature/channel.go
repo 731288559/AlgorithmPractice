@@ -6,8 +6,8 @@ import (
 	"time"
 )
 
-// 两个goroutine交替打印
-func Channel_1() {
+// ChannelTest1 两个goroutine交替打印1~20
+func ChannelTest1() {
 	n := 20
 	ch1 := make(chan int, 1)
 	ch2 := make(chan int, 1)
@@ -34,7 +34,8 @@ func Channel_1() {
 	wg.Wait()
 }
 
-func Channel_2() {
+// ChannelTest2 两个协程交替打印0和1，共10次
+func ChannelTest2() {
 	ch := make(chan int, 0)
 	var wg sync.WaitGroup
 	wg.Add(2)

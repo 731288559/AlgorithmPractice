@@ -1,10 +1,13 @@
 module my_practice
 
-go 1.24
+go 1.24.0
+
+toolchain go1.24.5
 
 require (
 	github.com/gin-gonic/gin v1.7.4
 	github.com/go-playground/assert/v2 v2.0.1
+	golang.org/x/sync v0.17.0
 )
 
 require (
