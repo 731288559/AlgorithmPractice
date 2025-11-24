@@ -43,14 +43,31 @@ func findTargetSumWays(nums []int, target int) int {
 	target /= 2
 
 	n := len(nums)
+
+	// 记忆化
+	memo := make([][]int, n)
+	for i := range memo {
+		memo[i] = make([]int, target+1)
+		for j := range memo[i] {
+			memo[i][j] = -1
+		}
+	}
+
 	var dfs func(i int, c int) int
-	dfs = func(i int, c int) int {
+	dfs = func(i int, c int) (res int) {
 		if i < 0 {
 			if c == 0 {
 				return 1
 			}
 			return 0
 		}
+
+		p := &memo[i][c]
+		if *p != -1 { // 之前计算过
+			return *p
+		}
+		defer func() { *p = res }()
+
 		if c < nums[i] {
 			return dfs(i-1, c)
 		}

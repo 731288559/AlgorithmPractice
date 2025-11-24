@@ -10,7 +10,7 @@ import "math"
 	注意：你不能同时参与多笔交易（你必须在再次购买前出售掉之前的股票）。
 */
 
-// 递推版本
+// DFS版本
 func maxProfit4V1(k int, prices []int) int {
 	n := len(prices)
 
@@ -36,6 +36,7 @@ func maxProfit4V1(k int, prices []int) int {
 	return dfs(n-1, k, false)
 }
 
+// 递推版本
 func maxProfit4(k int, prices []int) int {
 	n := len(prices)
 
